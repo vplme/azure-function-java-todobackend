@@ -1,0 +1,16 @@
+{
+  "scriptFile" : "../azure-function-demo-1.0.0-SNAPSHOT.jar",
+  "entryPoint" : "com.example.function.triggers.PatchTodo.run",
+  "bindings" : [ {
+    "type" : "httpTrigger",
+    "direction" : "in",
+    "name" : "req",
+    "route" : "todos/{id}",
+    "methods" : [ "PATCH" ],
+    "authLevel" : "ANONYMOUS"
+  }, {
+    "type" : "http",
+    "direction" : "out",
+    "name" : "$return"
+  } ]
+}
